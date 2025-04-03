@@ -1,0 +1,21 @@
+@import "tailwindcss" important;
+
+@theme {
+  --color-bgColor: #191a2e;
+  --color-bgColorPrimary: #16213d;
+  --color-bgColorSecondary: #0f345f;
+  --color-bgCTA: #e94460;
+  --color-textPrimary: #f9f9f9;
+}
+
+@layer components {
+  .subHeading {
+    @apply text-lg mt-4 opacity-90 leading-relaxed max-w-4xl mx-auto;
+  }
+  .cardStyle {
+    @apply bg-bgColorPrimary/50 backdrop-blur-sm rounded-xl overflow-hidden border border-bgColorSecondary/50 hover:border-bgCTA/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10;
+  }
+  .formFocus {
+    @apply focus:outline-none focus:ring-2 focus:ring-bgCTA/50 focus:border-transparent text-textPrimary bg-gray-700/50 border border-gray-600 rounded-lg w-full px-4 py-3;
+  }
+}
