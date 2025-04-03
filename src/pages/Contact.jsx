@@ -87,7 +87,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 formFocus"
+                  className="formFocus"
                   required
                 />
               </div>
@@ -123,7 +123,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3   formFocus"
+                  className="formFocus"
                   required
                 />
               </div>
