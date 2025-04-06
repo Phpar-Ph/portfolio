@@ -46,7 +46,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
-                    <p>your.email@example.com</p>
+                    <p>philip.nioda19@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 text-gray-300">
@@ -55,7 +55,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">Phone</p>
-                    <p>+1 (123) 456-7890</p>
+                    <p>09947918269</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 text-gray-300">
@@ -64,7 +64,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">Location</p>
-                    <p>Your Location, City, Country</p>
+                    <p>Salinas Drive Apas, Cebu City</p>
                   </div>
                 </div>
               </div>

@@ -16,8 +16,8 @@ const NavMenu = [
   },
 ];
 
-const activeLink = " text-bgCTA  hover:text-bgColorSecondary";
-const inactiveLink = "hover:text-bgColorSecondary";
+const activeLink = " text-bgCTA/80  hover:text-bgCTA";
+const inactiveLink = "hover:text-bgCTA";
 
 const NavBar = () => {
   return (

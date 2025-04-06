@@ -15,7 +15,7 @@ export const skills = [
   {
     category: "Frontend",
     icon: <Code2 className="text-blue-400" size={24} />,
-    items: ["React", "TypeScript", "Tailwind CSS"],
+    items: ["React", "Javascript", "Tailwind CSS"],
   },
   {
     category: "Backend",

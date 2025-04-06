@@ -8,14 +8,13 @@ function Home() {
       <div className=" text-textPrimary mx-auto text-center p-40">
         <div className="mb-10">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-xl mb-10">
-            Welcome to My Web Development Journey!
+            Welcome to My Web Dev Journey!
           </h1>
 
           <h2 className="subHeading">
-            I'm a passionate web developer dedicated to building creative,
-            functional, and user-friendly websites. Every project is a step
-            toward mastering my craft, and I'm excited to share my work with
-            you.
+            Crafting clean, functional, and user-first websites. Every project
+            is a step toward mastering my craft, and I'm excited to share my
+            work with you.
           </h2>
         </div>
 
