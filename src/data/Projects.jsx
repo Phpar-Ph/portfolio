@@ -23,12 +23,12 @@ export const projects = [
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
     technologies: ["React", "JavaScript", "Tailwind CSS", "React Router"],
     githubUrl: "https://github.com/Phpar-Ph/Dev-Tools",
-    liveUrl: "https://project2.com",
+    liveUrl: "https://dev-toolshub.netlify.app/",
   },
   {
     title: "E-commerce Local",
     description:
-      "An e-commerce website for local products, featuring backend development and database-powered image storage.",
+      "An e-commerce website for local products, featuring backend development and database for image storage.",
     image:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
     technologies: [
@@ -40,6 +40,6 @@ export const projects = [
       "UploadThing",
     ],
     githubUrl: "https://github.com/yourusername/project3",
-    liveUrl: "https://project3.com",
+    liveUrl: "https://bohol-local.netlify.app/",
   },
 ];

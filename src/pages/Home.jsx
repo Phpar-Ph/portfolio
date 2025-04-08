@@ -1,6 +1,7 @@
 import React from "react";
 import { FileText } from "lucide-react";
 import { skills } from "../data/Skills";
+import { NavLink } from "react-router";
 
 function Home() {
   return (
@@ -20,11 +21,18 @@ function Home() {
 
         {/* BUTTON */}
         <div className="space-x-4">
-          <button className="mt-6 px-6 py-3 bg-bgCTA text-textPrimary font-semibold rounded-lg shadow-md hover:bg-bgColorSecondary transition-all duration-300">
-            View My Work
-          </button>
+          <NavLink to="/projects">
+            <button className="mt-6 px-6 py-3 bg-bgCTA text-textPrimary font-semibold rounded-lg shadow-md hover:bg-bgColorSecondary transition-all duration-300">
+              View My Work
+            </button>
+          </NavLink>
           <button
-            onClick={() => window.open("/path-to-your-resume.pdf", "_blank")}
+            onClick={() =>
+              window.open(
+                "https://ukwi2uoynz.ufs.sh/f/n61QCrGyY4FXmX4aF0pkqojRIbKa1QFTX4L5DNrmfsVvPcB9",
+                "_blank"
+              )
+            }
             className="mt-6 px-6 py-3 hover:bg-[#E94460] text-white font-semibold rounded-lg shadow-md bg-bgColorSecondary transition-all duration-300"
           >
             <span className="flex items-center gap-2">
