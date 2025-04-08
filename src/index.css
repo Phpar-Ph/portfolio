@@ -10,7 +10,7 @@
 
 @layer components {
   .subHeading {
-    @apply text-lg mt-4 opacity-90 leading-relaxed max-w-4xl mx-auto;
+    @apply text-sm md:text-lg lg:text-lg xl:text-xl mt-2 opacity-90 leading-relaxed max-w-4xl mx-auto;
   }
   .cardStyle {
     @apply bg-bgColorPrimary/50 backdrop-blur-sm rounded-xl overflow-hidden border border-bgColorSecondary/50 hover:border-bgCTA/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10;

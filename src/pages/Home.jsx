@@ -6,9 +6,9 @@ import { NavLink } from "react-router";
 function Home() {
   return (
     <div className="w-full h-screen">
-      <div className=" text-textPrimary mx-auto text-center p-40">
-        <div className="mb-10">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-xl mb-10">
+      <div className=" text-textPrimary mx-auto text-center pl-10 pr-10 pt-40 ">
+        <div className="mb-10 ">
+          <h1 className=" text-3xl  md:text-4xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight drop-shadow-xl mb-4">
             Welcome to My Web Dev Journey!
           </h1>
 
