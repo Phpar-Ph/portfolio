@@ -1,24 +1,35 @@
-import React, { useState } from "react";
+/* eslint-disable no-undef */
+import React, { useRef } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (e) => {
+  const form = useRef();
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log();
-  };
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          Swal.fire({
+            title: "Success!",
+            text: "Message sent successfully!",
+            icon: "success",
+          });
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          console.log(import.meta.env.VITE_APP_EMAILJS_SERVICE_ID); // For Vite
+          console.log(import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID);
+          console.log(import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY);
+        }
+      );
   };
 
   return (
@@ -73,55 +84,32 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className=" p-8 cardStyle">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-300 mb-2"
-                >
+                <label className="block text-sm font-medium text-gray-300 mb-2">
                   Name
                 </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="formFocus"
-                  required
-                />
+                <input type="text" name="name" className="formFocus" required />
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-300 mb-2"
-                >
+                <label className="block text-sm font-medium text-gray-300 mb-2">
                   Email
                 </label>
                 <input
                   type="email"
-                  id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 formFocus"
                   required
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-300 mb-2"
-                >
+                <label className="block text-sm font-medium text-gray-300 mb-2">
                   Message
                 </label>
                 <textarea
-                  id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   rows={4}
                   className="formFocus"
                   required
@@ -130,6 +118,7 @@ const Contact = () => {
 
               <button
                 type="submit"
+                value="Send"
                 className="w-full  py-3 rounded-lg font-medium  bg-bgCTA hover:bg-bgColorSecondary transition-all duration-300 flex items-center justify-center gap-2 group"
               >
                 <Send
