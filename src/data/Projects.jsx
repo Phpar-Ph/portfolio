@@ -12,7 +12,7 @@ export const projects = [
       "EmailJS",
       "React Scroll",
     ],
-    githubUrl: "https://github.com/yourusername/project1",
+    githubUrl: "https://github.com/Phpar-Ph/takusi-ice-cream",
     liveUrl: "https://takusi-icecream.netlify.app/",
   },
   {
@@ -39,7 +39,7 @@ export const projects = [
       "Node.js",
       "UploadThing",
     ],
-    githubUrl: "https://github.com/yourusername/project3",
+    githubUrl: "https://github.com/Phpar-Ph/bohol-local-shop",
     liveUrl: "https://bohol-local.netlify.app/",
   },
 ];
