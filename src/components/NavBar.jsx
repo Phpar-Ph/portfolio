@@ -26,7 +26,7 @@ const NavBar = () => {
         <div>
           <h1 className="flex items-center font-extrabold">
             <ChevronLeft className="text-bgCTA " size={40} />
-            Portfolio
+            <NavLink to="/">Portfolio</NavLink>
             <ChevronRight className="text-bgCTA" size={40} />
           </h1>
         </div>

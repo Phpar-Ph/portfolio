@@ -5,7 +5,7 @@ import { NavLink } from "react-router";
 
 function Home() {
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-full mb-10">
       <div className=" text-textPrimary mx-auto text-center pl-10 pr-10 pt-40 ">
         <div className="mb-10 ">
           <h1 className=" text-3xl  md:text-4xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight drop-shadow-xl mb-4">
@@ -42,7 +42,7 @@ function Home() {
           </button>
         </div>
         {/* SKILLS */}
-        <div className="mt-40">
+        <div className="mt-40 flex justify-center items-center">
           <div className="space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold">My Skills</h2>
@@ -52,25 +52,29 @@ function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {skills.map((skill, index) => (
-                <div key={index} className="cardStyle p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    {skill.icon}
-                    <h3 className="text-xl font-semibold">{skill.category}</h3>
+            <div className="container flex items-center justify-center ">
+              <div className="grid grid-cols-1 md:grid-cols-2  gap-8 ">
+                {skills.map((skill, index) => (
+                  <div key={index} className="cardStyle p-6 max-w-md">
+                    <div className="flex items-center gap-3 mb-4">
+                      {skill.icon}
+                      <h3 className="text-xl font-semibold">
+                        {skill.category}
+                      </h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {skill.items.map((item, itemIndex) => (
+                        <span
+                          key={itemIndex}
+                          className="px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {skill.items.map((item, itemIndex) => (
-                      <span
-                        key={itemIndex}
-                        className="px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
