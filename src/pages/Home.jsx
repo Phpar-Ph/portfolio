@@ -29,7 +29,7 @@ function Home() {
           <button
             onClick={() =>
               window.open(
-                "https://ukwi2uoynz.ufs.sh/f/n61QCrGyY4FXmX4aF0pkqojRIbKa1QFTX4L5DNrmfsVvPcB9",
+                "https://ukwi2uoynz.ufs.sh/f/n61QCrGyY4FXbwMaU9j0TSiF5yjcHeX3NCQngaz6xfAOoWYV",
                 "_blank"
               )
             }
