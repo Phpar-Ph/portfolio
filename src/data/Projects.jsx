@@ -40,6 +40,26 @@ export const projects = [
       "UploadThing",
     ],
     githubUrl: "https://github.com/Phpar-Ph/bohol-local-shop",
-    liveUrl: "https://bohol-local.netlify.app/",
+    liveUrl: "https://bohol-local-shop-frontend.onrender.com/",
+  },
+  {
+    title: "User Authentication",
+    description:
+      "A user authentication and authorization website with backend development and database for image storage.",
+    image:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+    technologies: [
+      "React",
+      "Express",
+      "Tailwind CSS",
+      "MongoDB",
+      "Node.js",
+      "UploadThing",
+      "JWT",
+      "Bcrypt",
+      "nodemailer",
+    ],
+    githubUrl: "https://github.com/Phpar-Ph/User_Authentication",
+    liveUrl: "https://user-authentication-frontend-6460.onrender.com/",
   },
 ];
