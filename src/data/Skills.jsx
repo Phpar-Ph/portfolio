@@ -25,7 +25,7 @@ export const skills = [
   {
     category: "Database",
     icon: <Database className="text-yellow-400" size={24} />,
-    items: ["PostgreSQL", "MongoDB", "Supabase"],
+    items: ["MongoDB", "Supabase"],
   },
   //   {
   //     category: "DevOps",
