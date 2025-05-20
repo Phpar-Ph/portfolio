@@ -1,3 +1,4 @@
+import { Pickaxe } from "lucide-react";
 export const projects = [
   {
     title: "Takusi Ice Cream",
@@ -41,6 +42,12 @@ export const projects = [
     ],
     githubUrl: "https://github.com/Phpar-Ph/bohol-local-shop",
     liveUrl: "https://bohol-local-shop-frontend.onrender.com/",
+    progress: {
+      text: "Under Development",
+      icon: <Pickaxe className="w-5 h-5" />,
+      className:
+        "absolute top-22 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex justify-center items-center gap-2 bg-black/50 px-4 py-2 rounded-full text-amber-500",
+    },
   },
   {
     title: "User Authentication",
@@ -61,5 +68,31 @@ export const projects = [
     ],
     githubUrl: "https://github.com/Phpar-Ph/User_Authentication",
     liveUrl: "https://user-authentication-frontend-6460.onrender.com/",
+  },
+  {
+    title: "EternaLink",
+    description:
+      "EternaLink is a heartfelt project that allows families and friends to create digital memorials in honor of their loved ones.",
+    image:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+    technologies: [
+      "React",
+      "Express",
+      "Tailwind CSS",
+      "MongoDB",
+      "Node.js",
+      "UploadThing",
+      "JWT",
+      "Bcrypt",
+      "nodemailer",
+    ],
+    githubUrl: "https://github.com/Phpar-Ph/EternaLink",
+    liveUrl: "https://eternalink-fronend.onrender.com",
+    progress: {
+      text: "Under Development",
+      icon: <Pickaxe className="w-5 h-5" />,
+      className:
+        "absolute top-22 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full flex justify-center items-center gap-2 bg-black/50 px-4 py-2 rounded-full text-amber-500",
+    },
   },
 ];

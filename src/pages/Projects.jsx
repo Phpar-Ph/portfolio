@@ -1,6 +1,7 @@
 import React from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { projects } from "../data/Projects";
+import { LuGithub } from "react-icons/lu";
 
 const Projects = () => {
   return (
@@ -27,13 +28,22 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
                 </div>
                 <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <h3 className="text-xl font-semibold">
+                    {project.title}{" "}
+                    {project.progress && (
+                      <div className={project.progress.className}>
+                        {project.progress.icon}
+                        <span>{project.progress.text}</span>
+                        {project.progress.icon}
+                      </div>
+                    )}
+                  </h3>
                   <p className="text-gray-400">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300"
+                        className=" px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300"
                       >
                         {tech}
                       </span>
@@ -46,7 +56,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition-colors"
                     >
-                      <Github size={20} />
+                      <LuGithub size={20} />
                       Code
                     </a>
                     <a
